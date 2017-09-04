@@ -1,46 +1,110 @@
-//
-//  AppDelegate.swift
-//  GTMRefreshExample
-//
-//  Created by luoyang on 2016/12/6.
-//  Copyright © 2016年 luoyang. All rights reserved.
-//
-
-import UIKit
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+ import UIKit
+ @UIApplicationMain
+ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let page = Page1()
+        self.window!.rootViewController = page
+        self.window?.makeKeyAndVisible()
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+ }
+ import GTMRefresh
+ 
+ class Page1: UITableViewController {
+    
+    var models = [SectionModel]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let section0 = SectionModel(rowsCount: 4,
+                                    sectionTitle:"Default",
+                                    rowsTitles: ["Tableview","CollectionView","ScrollView","WebView"],
+                                    rowsTargetControlerNames:["DefaultTableViewController","DefaultCollectionViewController","DefaultScrollViewController","DefaultWebViewController"])
+        
+        
+        let section1 = SectionModel(rowsCount: 7,
+                                    sectionTitle:"Customize",
+                                    rowsTitles: ["QQ","YahooWeather","Curve Mask","Youku","TaoBao","QQ Video","DianPing"],
+                                    rowsTargetControlerNames:["QQStyleHeaderViewController","YahooWeatherTableViewController","CurveMaskTableViewController","YoukuTableViewController","TaobaoTableViewController","QQVideoTableviewController","DianpingTableviewController"])
+        models.append(section0)
+        models.append(section1)
+        
+        self.tableView.gtm_addRefreshHeaderView {
+            [weak self] in
+            print("excute refreshBlock")
+            self?.refresh()
+        }
+        
+        self.tableView.gtm_addLoadMoreFooterView {
+            [weak self] in
+            print("excute loadMoreBlock")
+            self?.loadMore()
+        }
+        
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        // text
+        self.tableView.pullDownToRefreshText("下拉刷新")
+            .releaseToRefreshText("松开刷新")
+            .refreshSuccessText("刷新成功")
+            .refreshFailureText("刷新失败")
+            .refreshingText("刷新中")
+        // color
+        self.tableView.headerTextColor(.red)
+        // icon
+        self.tableView.headerIdleImage(UIImage.init(named: "dropdown_anim__00048"))
+        self.tableView.pullUpToRefreshText("上拉装入").loaddingText("装入中...").noMoreDataText("没有更多数据").releaseLoadMoreText("松开则装入")
+        self.tableView.footerIdleImage(UIImage.init(named: "dropdown_anim__00048"))
+        
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    func refresh() {
+        perform(#selector(endRefresing), with: nil, afterDelay: 3)
     }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    func endRefresing() {
+        self.tableView.endRefreshing(isSuccess: true)
     }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    func loadMore() {
+        perform(#selector(endLoadMore), with: nil, afterDelay: 3)
     }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    func endLoadMore() {
+        self.tableView.endLoadMore(isNoMoreData: true)
     }
-
-
-}
-
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return models.count
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30.0
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let sectionModel = models[section]
+        return sectionModel.sectionTitle
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let sectionModel = models[section]
+        return sectionModel.rowsCount
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+            
+        }
+        let sectionModel = models[(indexPath as NSIndexPath).section]
+        cell?.textLabel?.text = sectionModel.rowsTitles[(indexPath as NSIndexPath).row]
+        return cell!
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let sectionModel = models[(indexPath as NSIndexPath).section]
+        var className = sectionModel.rowsTargetControlerNames[(indexPath as NSIndexPath).row]
+        className = "GTMRefreshExample.\(className)"
+        if let cls = NSClassFromString(className) as? UIViewController.Type{
+            let dvc = cls.init()
+            self.navigationController?.pushViewController(dvc, animated: true)
+        }
+    }
+ }
+ 

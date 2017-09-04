@@ -22,7 +22,7 @@ class GTMRefreshConstant {
     static var associatedObjectGtmHeader = 0
     static var associatedObjectGtmFooter = 1
 }
-
+// 干嘛不直接用词典？
 public func GTMRLocalize(_ string:String)->String{
     return NSLocalizedString(string, tableName: "Localize", bundle: Bundle(for: DefaultGTMRefreshHeader.self), value: "", comment: "")
 }
