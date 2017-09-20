@@ -43,7 +43,8 @@ extension Page1{
 
 ```
 
-#开源协议
+# 开源协议
+
 本项目遵循 MIT 协议开源，具体请查看根目录下的 [LICENSE](https://raw.githubusercontent.com/GTMYang/GTMRefresh/master/LICENSE) 文件。
 
 
