@@ -140,9 +140,6 @@ class DefaultGTMLoadMoreFooter: GTMLoadMoreFooter, SubGTMLoadMoreFooterProtocol 
         messageLabel.text =  self.loaddingText
     }
 }
-
-import UIKit
-import ObjectiveC
 extension UIScrollView {
     internal var gtmHeader: GTMRefreshHeader? {
         get {
@@ -373,14 +370,6 @@ public struct GTMRFooterString{
     static public let releaseLoadMore = GTMRLocalize("releaseLoadMore")
     //static public let scrollAndTapToRefresh = GTMRLocalize("scrollAndTapToRefresh")
 }
-//
-//  GTMRefreshComponent.swift
-//  GTMRefresh
-//
-//  Created by luoyang on 2016/12/7.
-//  Copyright © 2016年 luoyang. All rights reserved.
-//
-import UIKit
 /// 状态枚举
 ///
 /// - idle:         闲置
@@ -834,3 +823,4 @@ open class GTMLoadMoreFooter: GTMRefreshComponent, SubGTMRefreshComponentProtoco
     }
 }
 import UIKit
+import ObjectiveC
