@@ -21,8 +21,8 @@
 		2671156E1DF6AEDD00F27CEA /* GTMRefresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 267115421DF6AE0D00F27CEA /* GTMRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		269357821DFE30C900D32A63 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 269357811DFE30C900D32A63 /* logo.png */; };
 		26F34AFF1DFB077B004C8CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F34AFE1DFB077B004C8CF1 /* Assets.xcassets */; };
-		6FB38FE61F72395900E5A179 /* cjrefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB38FE51F72395900E5A179 /* cjrefresh.swift */; };
 		6FB38FEA1F7241C100E5A179 /* default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB38FE91F7241C100E5A179 /* default.swift */; };
+		6FB38FF01F72507200E5A179 /* cjrefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB38FEF1F72507200E5A179 /* cjrefresh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +68,8 @@
 		267115661DF6AEAA00F27CEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		269357811DFE30C900D32A63 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		26F34AFE1DFB077B004C8CF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6FB38FE51F72395900E5A179 /* cjrefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cjrefresh.swift; path = Resource/cjrefresh.swift; sourceTree = "<group>"; };
 		6FB38FE91F7241C100E5A179 /* default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = default.swift; sourceTree = "<group>"; };
+		6FB38FEF1F72507200E5A179 /* cjrefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cjrefresh.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 		267115441DF6AE0D00F27CEA /* GTMRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				6FB38FE51F72395900E5A179 /* cjrefresh.swift */,
+				6FB38FEF1F72507200E5A179 /* cjrefresh.swift */,
 				2671154D1DF6AE2E00F27CEA /* Supporting Files */,
 			);
 			path = GTMRefresh;
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FB38FE61F72395900E5A179 /* cjrefresh.swift in Sources */,
+				6FB38FF01F72507200E5A179 /* cjrefresh.swift in Sources */,
 				267115531DF6AE4E00F27CEA /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
