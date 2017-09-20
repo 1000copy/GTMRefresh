@@ -38,12 +38,6 @@
 		26A767971DFB0FAF00A2ADD1 /* arrow_downWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A767941DFB0FAF00A2ADD1 /* arrow_downWhite.png */; };
 		26A767981DFB0FAF00A2ADD1 /* CurveMaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A767951DFB0FAF00A2ADD1 /* CurveMaskTableViewController.swift */; };
 		26A767991DFB0FAF00A2ADD1 /* CurveRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A767961DFB0FAF00A2ADD1 /* CurveRefreshHeader.swift */; };
-		26B9A9781DF7AFDA00D0BAA6 /* GTMRefreshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B9A9771DF7AFDA00D0BAA6 /* GTMRefreshComponent.swift */; };
-		26B9A97C1DF7DD9900D0BAA6 /* GTMRefreshExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B9A97B1DF7DD9900D0BAA6 /* GTMRefreshExtension.swift */; };
-		26B9A97E1DF7E1B200D0BAA6 /* GTMRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B9A97D1DF7E1B200D0BAA6 /* GTMRefreshHeader.swift */; };
-		26B9A9801DF7E1C000D0BAA6 /* GTMLoadMoreFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B9A97F1DF7E1C000D0BAA6 /* GTMLoadMoreFooter.swift */; };
-		26B9A9821DF8088900D0BAA6 /* GTMRefreshConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B9A9811DF8088900D0BAA6 /* GTMRefreshConstant.swift */; };
-		26EEEF851F399BCF00A94AE5 /* GTMRefreshStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EEEF841F399BCF00A94AE5 /* GTMRefreshStyle.swift */; };
 		26F3498B1DFAF37E004C8CF1 /* YahooWeatherRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F3498A1DFAF37E004C8CF1 /* YahooWeatherRefreshHeader.swift */; };
 		26F3498D1DFAF39F004C8CF1 /* YahooWeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F3498C1DFAF39F004C8CF1 /* YahooWeatherTableViewController.swift */; };
 		26F349FE1DFAF3D5004C8CF1 /* sun_00000.png in Resources */ = {isa = PBXBuildFile; fileRef = 26F3498F1DFAF3D5004C8CF1 /* sun_00000.png */; };
@@ -230,6 +224,8 @@
 		26F34AFC1DFB007C004C8CF1 /* YoukuRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F34AF71DFB007B004C8CF1 /* YoukuRefreshHeader.swift */; };
 		26F34AFD1DFB007C004C8CF1 /* YoukuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F34AF81DFB007B004C8CF1 /* YoukuTableViewController.swift */; };
 		26F34AFF1DFB077B004C8CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F34AFE1DFB077B004C8CF1 /* Assets.xcassets */; };
+		6FB38FE61F72395900E5A179 /* gtmRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB38FE51F72395900E5A179 /* gtmRefresh.swift */; };
+		6FB38FE81F7239B500E5A179 /* default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB38FE71F7239B500E5A179 /* default.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,12 +288,6 @@
 		26A767941DFB0FAF00A2ADD1 /* arrow_downWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_downWhite.png; sourceTree = "<group>"; };
 		26A767951DFB0FAF00A2ADD1 /* CurveMaskTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveMaskTableViewController.swift; sourceTree = "<group>"; };
 		26A767961DFB0FAF00A2ADD1 /* CurveRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveRefreshHeader.swift; sourceTree = "<group>"; };
-		26B9A9771DF7AFDA00D0BAA6 /* GTMRefreshComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshComponent.swift; sourceTree = "<group>"; };
-		26B9A97B1DF7DD9900D0BAA6 /* GTMRefreshExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshExtension.swift; sourceTree = "<group>"; };
-		26B9A97D1DF7E1B200D0BAA6 /* GTMRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshHeader.swift; sourceTree = "<group>"; };
-		26B9A97F1DF7E1C000D0BAA6 /* GTMLoadMoreFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMLoadMoreFooter.swift; sourceTree = "<group>"; };
-		26B9A9811DF8088900D0BAA6 /* GTMRefreshConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshConstant.swift; sourceTree = "<group>"; };
-		26EEEF841F399BCF00A94AE5 /* GTMRefreshStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTMRefreshStyle.swift; sourceTree = "<group>"; };
 		26F3498A1DFAF37E004C8CF1 /* YahooWeatherRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YahooWeatherRefreshHeader.swift; sourceTree = "<group>"; };
 		26F3498C1DFAF39F004C8CF1 /* YahooWeatherTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YahooWeatherTableViewController.swift; sourceTree = "<group>"; };
 		26F3498F1DFAF3D5004C8CF1 /* sun_00000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun_00000.png; sourceTree = "<group>"; };
@@ -484,6 +474,8 @@
 		26F34AF71DFB007B004C8CF1 /* YoukuRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoukuRefreshHeader.swift; sourceTree = "<group>"; };
 		26F34AF81DFB007B004C8CF1 /* YoukuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoukuTableViewController.swift; sourceTree = "<group>"; };
 		26F34AFE1DFB077B004C8CF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FB38FE51F72395900E5A179 /* gtmRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gtmRefresh.swift; path = Resource/gtmRefresh.swift; sourceTree = "<group>"; };
+		6FB38FE71F7239B500E5A179 /* default.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = default.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,7 +528,8 @@
 				2655CB391DF94569001C50CF /* success@3x.png */,
 				2655CB401DF945A0001C50CF /* Localize.strings */,
 			);
-			path = Resource;
+			name = Resource;
+			path = GTMRefresh/Resource;
 			sourceTree = "<group>";
 		};
 		2655CB431DF95617001C50CF /* CurveMask */ = {
@@ -613,6 +606,7 @@
 		267115381DF6AE0D00F27CEA = {
 			isa = PBXGroup;
 			children = (
+				2655CB371DF9453D001C50CF /* Resource */,
 				26044DB81DFD7AB7006E82B3 /* Demo */,
 				2671154E1DF6AE4E00F27CEA /* GTMRefresh.podspec */,
 				269357811DFE30C900D32A63 /* logo.png */,
@@ -636,14 +630,9 @@
 		267115441DF6AE0D00F27CEA /* GTMRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				2655CB371DF9453D001C50CF /* Resource */,
-				26B9A9811DF8088900D0BAA6 /* GTMRefreshConstant.swift */,
-				26B9A9771DF7AFDA00D0BAA6 /* GTMRefreshComponent.swift */,
-				26B9A97D1DF7E1B200D0BAA6 /* GTMRefreshHeader.swift */,
-				26B9A97F1DF7E1C000D0BAA6 /* GTMLoadMoreFooter.swift */,
-				26B9A97B1DF7DD9900D0BAA6 /* GTMRefreshExtension.swift */,
-				26EEEF841F399BCF00A94AE5 /* GTMRefreshStyle.swift */,
+				6FB38FE51F72395900E5A179 /* gtmRefresh.swift */,
 				2671154D1DF6AE2E00F27CEA /* Supporting Files */,
+				6FB38FE71F7239B500E5A179 /* default.swift */,
 			);
 			path = GTMRefresh;
 			sourceTree = "<group>";
@@ -1169,12 +1158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26B9A97C1DF7DD9900D0BAA6 /* GTMRefreshExtension.swift in Sources */,
-				26B9A97E1DF7E1B200D0BAA6 /* GTMRefreshHeader.swift in Sources */,
-				26B9A9821DF8088900D0BAA6 /* GTMRefreshConstant.swift in Sources */,
-				26B9A9781DF7AFDA00D0BAA6 /* GTMRefreshComponent.swift in Sources */,
-				26B9A9801DF7E1C000D0BAA6 /* GTMLoadMoreFooter.swift in Sources */,
-				26EEEF851F399BCF00A94AE5 /* GTMRefreshStyle.swift in Sources */,
+				6FB38FE61F72395900E5A179 /* gtmRefresh.swift in Sources */,
+				6FB38FE81F7239B500E5A179 /* default.swift in Sources */,
 				267115531DF6AE4E00F27CEA /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
